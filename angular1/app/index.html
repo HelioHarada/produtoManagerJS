@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="ControleFinanceiro"> <!--controlda pelo single page aplication -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ consts.appName }}</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="/assets/css/deps.min.css">
+  <link rel="stylesheet" href="/assets/css/app.min.css">
+  <link rel="stylesheet" type="text/html" href="estilo.css">
+</head>
+<body class="skin-red fixed sidebar-mini">
+  <div class="wrapper">
+    <header class="main-header" ng-include="'/template/header/header.html'"></header>
+    <aside class="main-sidebar"  ng-include="'/template/menu/menu.html'"></aside>
+    <div class="content-wrapper" ui-view></div> <!--qualquer mudança de estado é atualizado pelo ui-router -->
+    <footer class="main-footer"  ng-include="'/template/footer/footer.html'"></footer>
+  </div>
+
+  <script src="/assets/js/deps.min.js"></script>
+  <script src="/assets/js/app.min.js"></script>
+</body>
+</html>
